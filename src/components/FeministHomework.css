@@ -1,0 +1,144 @@
+.fh-section {
+  background: var(--parchment);
+  padding: var(--section-pad);
+  position: relative;
+  overflow: hidden;
+}
+
+.fh-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  pointer-events: none;
+}
+
+.fh-title {
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--forest);
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+.fh-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+
+.fh-progress__bar {
+  flex: 1;
+  height: 3px;
+  background: var(--parchment-dark);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.fh-progress__fill {
+  height: 100%;
+  background: var(--terracotta);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.fh-progress__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.fh-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  max-width: 700px;
+}
+
+.fh-item {
+  transition: opacity 0.2s;
+}
+
+.fh-label {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--parchment-dark);
+  border-radius: 3px;
+  background: var(--white);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.fh-label:hover {
+  border-color: var(--terracotta);
+  background: var(--parchment);
+}
+
+.fh-item--done .fh-label {
+  border-color: rgba(196,98,45,0.3);
+  background: rgba(196,98,45,0.05);
+}
+
+.fh-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.fh-custom-check {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--parchment-dark);
+  border-radius: 2px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+  background: var(--white);
+}
+
+.fh-item--done .fh-custom-check {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
+.fh-check-mark {
+  color: var(--white);
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.fh-item-text {
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.fh-item--done .fh-item-text {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: rgba(196,98,45,0.4);
+}
+
+.fh-complete {
+  margin-top: 2rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--terracotta);
+  animation: fadeUp 0.5s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fh-progress__fill { transition: none; }
+}

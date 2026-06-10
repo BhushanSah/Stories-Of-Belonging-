@@ -1,0 +1,127 @@
+.journey-section {
+  background: var(--forest);
+  padding: var(--section-pad);
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.journey-path {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.journey-stage {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.journey-stage--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.journey-stage__btn {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+}
+
+.journey-stage__marker {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.journey-stage__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--terracotta);
+  opacity: 0.4;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.journey-stage--active .journey-stage__ring {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.journey-stage__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  transition: background 0.2s;
+}
+
+.journey-stage--active .journey-stage__dot {
+  background: var(--rose);
+}
+
+.journey-stage__label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--parchment);
+  transition: color 0.2s;
+}
+
+.journey-stage--active .journey-stage__label {
+  color: var(--rose);
+}
+
+.journey-stage__btn:hover .journey-stage__label {
+  color: var(--rose);
+}
+
+.journey-stage__desc {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: rgba(242, 235, 217, 0.75);
+  margin: 0.5rem 0 0.75rem 3.5rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  border-left: 2px solid rgba(196, 98, 45, 0.3);
+  padding-left: 1rem;
+  animation: fadeUp 0.3s ease both;
+}
+
+.journey-connector {
+  width: 2px;
+  height: 32px;
+  background: linear-gradient(to bottom, var(--terracotta), rgba(196,98,45,0.2));
+  margin-left: 11px;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.1s;
+}
+
+.journey-connector--visible { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-stage { opacity: 1; transform: none; transition: none; }
+  .journey-connector { opacity: 1; }
+}

@@ -1,0 +1,111 @@
+.pitch__grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.pitch__vision {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--parchment);
+  margin-bottom: 1.5rem;
+}
+
+.pitch__subhead {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--rose);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.pitch__body {
+  color: rgba(242, 235, 217, 0.8);
+  line-height: 1.85;
+  font-size: 0.97rem;
+}
+
+/* Sidebar cards */
+.pitch__taglines-card,
+.pitch__feedback-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(242, 235, 217, 0.12);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.pitch__taglines {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+.pitch__tagline {
+  display: flex;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--parchment);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.pitch__tagline-mark {
+  color: var(--terracotta);
+  flex-shrink: 0;
+}
+
+/* Feedback accordion */
+.pitch__feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.pitch__feedback-item {
+  border-bottom: 1px solid rgba(242, 235, 217, 0.12);
+  padding-bottom: 0.5rem;
+}
+
+.pitch__feedback-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--parchment);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.pitch__feedback-toggle:hover { color: var(--rose); }
+
+.pitch__arrow {
+  font-size: 1.1rem;
+  color: var(--terracotta);
+}
+
+.pitch__feedback-note {
+  font-size: 0.85rem;
+  color: rgba(242, 235, 217, 0.7);
+  line-height: 1.7;
+  padding: 0.5rem 0 0.25rem;
+}
+
+@media (max-width: 900px) {
+  .pitch__grid {
+    grid-template-columns: 1fr;
+  }
+}

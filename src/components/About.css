@@ -1,0 +1,175 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about__terms-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.about__term {
+  border-bottom: 1px solid var(--parchment-dark);
+}
+
+.about__term-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--forest);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.about__term-toggle:hover { color: var(--terracotta); }
+
+.about__arrow {
+  font-size: 1.1rem;
+  color: var(--terracotta);
+  flex-shrink: 0;
+}
+
+.about__term-body {
+  padding: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--muted);
+  animation: fadeUp 0.25s ease both;
+}
+
+.about__source {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--rose);
+}
+
+/* Right column */
+.about__statement {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about__quote-card {
+  background: var(--forest);
+  color: var(--parchment);
+  border-radius: 3px;
+  padding: 2rem;
+  position: relative;
+}
+
+.about__quote-mark {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--terracotta);
+  opacity: 0.3;
+  position: absolute;
+  top: 0.5rem;
+  left: 1.25rem;
+}
+
+.about__quote-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 0.85rem;
+}
+
+.about__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: rgba(242,235,217,0.87);
+  padding-top: 0.75rem;
+}
+
+.about__readings {
+  background: var(--parchment-dark);
+  border-radius: 3px;
+  padding: 1.5rem;
+}
+
+.about__readings-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.about__reading-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--charcoal);
+}
+
+.about__reading-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  flex-shrink: 0;
+}
+
+/* Questions This Project Carries */
+.about__questions {
+  border: 1px solid var(--parchment-dark);
+  border-radius: 3px;
+  padding: 1.5rem;
+  background: var(--white);
+}
+
+.about__questions-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.85rem;
+}
+
+.about__question {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+}
+
+.about__question-num {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--terracotta);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+  font-family: var(--font-body);
+}
+
+.about__question span:last-child {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--forest);
+  line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+  .about__grid { grid-template-columns: 1fr; }
+}

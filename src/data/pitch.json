@@ -1,0 +1,24 @@
+{
+  "vision": "A digital storytelling platform where feminism, decolonization, and faith meet through personal narrative. The goal is not agreement — it is presence. A space where people can bring their whole selves and build understanding across difference.",
+  "theoryOfChange": "Colonial systems persist partly through story. The stories we are taught about civilization, progress, and belonging shape what feels normal and what feels possible. By creating space for counter-narratives — stories that center kinship, responsibility, and the labor that goes unnamed — we chip away at those systems from the inside out.",
+  "motivation": "This project grew from a semester of learning how to become a good relative. From Patty Krawec's invitation to unforget the past. From Sara Ahmed's idea that feminism is homework we do every day. From realizing that the traditions I carried from Nepal — the kalawa, the collective decisions, the meals shared without invitations — were already practicing something this course gave me language for.",
+  "peerFeedback": [
+    {
+      "theme": "Accessibility",
+      "note": "Peers asked how the platform would reach people who do not think of themselves as feminist or activist. The design response: lead with story, not theory. Entry through personal experience, not academic vocabulary."
+    },
+    {
+      "theme": "Safety and consent",
+      "note": "Multiple peers raised questions about creating a safe space for vulnerable stories. This shaped the contribution guidelines — emphasizing care, anonymity options, and community review."
+    },
+    {
+      "theme": "Scope",
+      "note": "The professor encouraged thinking smaller first. The digital platform is a starting point, not the whole project. Real kinship happens offline, in workshops, study circles, and shared meals."
+    }
+  ],
+  "taglines": [
+    "Decolonization starts at home.",
+    "Become good relatives.",
+    "Feminism: how we pick each other up."
+  ]
+}

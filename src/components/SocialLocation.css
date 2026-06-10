@@ -1,0 +1,95 @@
+.sl-section {
+  background: var(--white);
+  padding: var(--section-pad);
+  position: relative;
+  overflow: hidden;
+}
+
+.sl-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.sl-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.sl-title { color: var(--forest); }
+
+.sl-reflection {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 460px;
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+/* Pathway */
+.sl-pathway {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding-left: 1rem;
+}
+
+.sl-node {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateX(-12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.sl-node--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sl-node__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--terracotta);
+  flex-shrink: 0;
+}
+
+.sl-node__label {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--forest);
+  letter-spacing: 0.01em;
+}
+
+.sl-connector {
+  width: 2px;
+  height: 28px;
+  background: linear-gradient(to bottom, var(--terracotta), var(--rose));
+  margin-left: calc(1rem + 5px);
+  opacity: 0;
+  transition: opacity 0.4s ease 0.1s;
+}
+
+.sl-connector--visible { opacity: 0.5; }
+
+@media (max-width: 800px) {
+  .sl-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .sl-reflection { max-width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sl-node { transition: none; }
+  .sl-node { opacity: 1; transform: none; }
+  .sl-connector { opacity: 0.5; }
+}
