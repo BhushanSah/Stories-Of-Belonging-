@@ -97,7 +97,7 @@ export default function Contribute() {
                 zine exchanges.
               </p>
               <a href="mailto:bhushan@kinproject.org" className="contribute__email">
-                bhushan@kinproject.org
+                sahb@berea.edu
               </a>
             </div>
           </div>
