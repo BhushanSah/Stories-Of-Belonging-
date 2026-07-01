@@ -1,6 +1,7 @@
 # Becoming Kin — Decolonial Feminist Storytelling Project
 
-A React web application built as a final project for *Intro: Decolonizing Feminism* at Gettysburg College (Dr. dp Patrick, Spring 2026).
+A React web application built as a final project for *Intro: Decolonizing Feminism* at Gettysburg College (Dr. dp Patrick).
+Link to website- https://stories-of-belonging.netlify.app/ 
 
 ## What This Is
 
